@@ -1,0 +1,31 @@
+GET http://localhost:5042/games
+
+###
+GET http://localhost:5042/games/1
+
+###
+POST http://localhost:5042/games 
+Content-Type: application/json
+
+{
+    "name": "aya",
+    "genreId": 5,
+    "price": 19.99,
+    "releaseDate": "2011-11-18"
+}
+
+###
+PUT http://localhost:5042/games/1
+Content-Type: application/json
+
+{
+    "name": "My game",
+    "genreId": 5,
+    "price": 19.99,
+    "releaseDate": "2011-11-18"
+  }
+
+
+
+###
+DELETE http://localhost:5042/games/9
