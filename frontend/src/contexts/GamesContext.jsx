@@ -6,6 +6,7 @@ import {
   useState,
 } from "react";
 import { useGenres } from "./GenresContext";
+import { useLocation } from "react-router-dom";
 
 const GamesContext = createContext();
 
@@ -19,26 +20,34 @@ function GamesProvider({ children }) {
 
   const { genres } = useGenres();
 
-  useEffect(function () {
-    async function fetchGames() {
-      try {
-        setIsLoading(true);
-        setError(null);
-        const res = await fetch(`${BASE_URL}/games`);
-        if (!res.ok) {
-          throw new Error(`Failed to fetch games: ${res.status}`);
+  const location = useLocation();
+
+  useEffect(
+    function () {
+      console.log("fetching");
+      async function fetchGames() {
+        try {
+          setIsLoading(true);
+          setError(null);
+          const res = await fetch(`${BASE_URL}/games`);
+          if (!res.ok) {
+            throw new Error(`Failed to fetch games: ${res.status}`);
+          }
+          const data = await res.json();
+          setGames(data);
+        } catch (err) {
+          console.log(err);
+          setError(err.message);
+        } finally {
+          setIsLoading(false);
         }
-        const data = await res.json();
-        setGames(data);
-      } catch (err) {
-        console.log(err);
-        setError(err.message);
-      } finally {
-        setIsLoading(false);
       }
-    }
-    fetchGames();
-  }, []);
+      if (location.pathname === "/") {
+        fetchGames();
+      }
+    },
+    [location.pathname]
+  );
 
   const getGame = useCallback(
     async function getGame(id) {

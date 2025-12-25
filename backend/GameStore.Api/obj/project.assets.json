@@ -2624,11 +2624,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ayabedair/Documents/dotNET/GameStore/GameStore.Api/GameStore.Api.csproj",
+      "projectUniqueName": "/home/ayabedair/Documents/web-dev/Projects/GameStore-fullStack/backend/GameStore.Api/GameStore.Api.csproj",
       "projectName": "GameStore.Api",
-      "projectPath": "/home/ayabedair/Documents/dotNET/GameStore/GameStore.Api/GameStore.Api.csproj",
+      "projectPath": "/home/ayabedair/Documents/web-dev/Projects/GameStore-fullStack/backend/GameStore.Api/GameStore.Api.csproj",
       "packagesPath": "/home/ayabedair/.nuget/packages/",
-      "outputPath": "/home/ayabedair/Documents/dotNET/GameStore/GameStore.Api/obj/",
+      "outputPath": "/home/ayabedair/Documents/web-dev/Projects/GameStore-fullStack/backend/GameStore.Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ayabedair/.nuget/NuGet/NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZCpNTtBKyg8=",
+  "dgSpecHash": "wH3mCyPm0OM=",
   "success": true,
-  "projectFilePath": "/home/ayabedair/Documents/dotNET/GameStore/GameStore.Api/GameStore.Api.csproj",
+  "projectFilePath": "/home/ayabedair/Documents/web-dev/Projects/GameStore-fullStack/backend/GameStore.Api/GameStore.Api.csproj",
   "expectedPackageFiles": [
     "/home/ayabedair/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/ayabedair/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

@@ -7,13 +7,11 @@ import { GamesProvider } from "./contexts/GamesContext";
 import { GenresProvider } from "./contexts/GenresContext";
 import AppLayout from "./components/AppLayout";
 
-// TODO: use app layout
-
 function App() {
   return (
     <GenresProvider>
-      <GamesProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <GamesProvider>
           <Routes>
             <Route element={<AppLayout />}>
               <Route index element={<HomePage />} />
@@ -25,8 +23,8 @@ function App() {
             <Route path="contact-us" element={<PageNotFound id={0} />} />
             <Route path="*" element={<PageNotFound id={1} />} />
           </Routes>
-        </BrowserRouter>
-      </GamesProvider>
+        </GamesProvider>
+      </BrowserRouter>
     </GenresProvider>
   );
 }

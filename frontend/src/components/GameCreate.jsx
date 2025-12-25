@@ -22,7 +22,7 @@ const GameEdit = () => {
 
   const genres = useGenres();
 
-  const handleSubmit = (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
     console.log(genreId);
     const newGame = {
@@ -31,9 +31,9 @@ const GameEdit = () => {
       price: Number(price),
       releaseDate: releaseDate,
     };
-    createGame(newGame);
+    await createGame(newGame);
     navigate("/");
-  };
+  }
 
   const handleCancel = () => {
     let confirmed = true;
